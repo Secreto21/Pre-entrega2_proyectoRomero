@@ -1,4 +1,4 @@
-# PreEntrega1Romero
+# PreEntrega2Romero
 Este es un proyecto de práctica para la Entrega 2 del curso. Incluye:
 - Página principal con secciones de servicios, preguntas frecuentes, testimonios y noticias.
 - Páginas adicionales: Nosotros, Servicios, FAQ y Contacto.
