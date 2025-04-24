@@ -1,48 +1,91 @@
-details {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  overflow: hidden;
-
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
-
-  .details-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    padding: 0 10px;
-    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out;
-  }
-
-  &[open] .details-content {
-    max-height: 1000px; /* o un valor suficientemente grande */
-    opacity: 1;
-    padding: 10px;
-  }
+:root {
+  --transition-duration: 0.8s;
+  interpolate-size: allow-keywords;
 }
 
+details {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: clip;
+}
 
-  .hero {
-    background-color: $navbar-bg-color;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
+summary {
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  font-weight: 500;
+  color: #1f2937;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "›";
+  font-size: 1.5rem;
+  transform: rotate(90deg);
+  transition: transform var(--transition-duration) ease;
+}
+
+details[open] summary::after {
+  transform: rotate(-90deg);
+}
+
+details::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+details:not([open]) .content {
+  max-height: 0; /* Cambia height por max-height */
+  opacity: 0;
+  transform: translateY(-8px);
+  padding: 0; /* Elimina el padding cuando está cerrado */
+  transition: 
+    max-height var(--transition-duration) ease-in-out,
+    opacity var(--transition-duration) ease-in-out,
+    transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+    padding var(--transition-duration) ease-in-out;
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+details[open] .content {
+  max-height: 500px; /* Usa un valor fijo suficientemente grande */
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0 1rem; /* Agrega el padding solo cuando está abierto */
+  background-color: #f8fafc;
+  transition: 
+    max-height var(--transition-duration) ease-in-out,
+    opacity var(--transition-duration) ease-in-out,
+    transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+    padding var(--transition-duration) ease-in-out;
+}
+
+details::details-content {
+  content-visibility: auto;
+  contain: content;
+  will-change: transform, opacity, height;
+}
+
+details:hover {
+  border-color: #93c5fd;
+}
+
+summary:hover {
+  background: #f8fafc;
+}
+
+summary:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+  border-radius: 8px;
+}

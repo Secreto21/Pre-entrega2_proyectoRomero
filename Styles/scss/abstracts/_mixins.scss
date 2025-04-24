@@ -13,3 +13,16 @@
 @mixin border-radius($radius: $border-radius) {
   border-radius: $radius;
 }
+
+@mixin fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
