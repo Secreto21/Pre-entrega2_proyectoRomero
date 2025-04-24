@@ -1,0 +1,15 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: 1024px) { @content; }
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+}
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}

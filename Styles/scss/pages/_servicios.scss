@@ -1,0 +1,54 @@
+.services {
+    margin-top: 20px;
+}
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    .btn {
+        margin-top: auto;
+    }
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+.hero {
+    background-color: $navbar-bg-color;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+}

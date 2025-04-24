@@ -1,0 +1,27 @@
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+// Layout
+@import 'layout/navbar';
+@import 'layout/footer';
+@import 'layout/forms';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+
+// Pages
+@import 'pages/nosotros';
+@import 'pages/servicios';
+@import 'pages/faq';
+@import 'pages/contacto';
+@import 'pages/index';
+
+// Vendors
+@import 'vendors/bootstrap';

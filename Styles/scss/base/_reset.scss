@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+details, summary {
+  all: unset; /* Elimina todos los estilos predeterminados */
+  display: block; /* Asegura que se comporten como bloques */
+}
