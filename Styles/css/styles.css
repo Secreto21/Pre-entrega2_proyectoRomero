@@ -39,6 +39,29 @@ img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.hero {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.hero h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: -20px;
+  right: -20px;
+  height: 3px;
+  background-color: #0056b3;
+}
+
 .navbar {
   background-color: #222;
   padding: 15px;
@@ -262,16 +285,6 @@ form button:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-.hero h1 {
-  font-size: 2.5rem;
-}
-
 :root {
   --transition-duration: 0.8s;
   interpolate-size: allow-keywords;
@@ -354,29 +367,6 @@ summary:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: -2px;
   border-radius: 8px;
-}
-
-.hero {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #007bff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-.hero h1::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: -20px;
-  right: -20px;
-  height: 3px;
-  background-color: #0056b3;
 }
 
 /*news*/
