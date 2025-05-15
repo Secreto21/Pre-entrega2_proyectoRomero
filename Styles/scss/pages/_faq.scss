@@ -45,23 +45,23 @@ details::backdrop {
 }
 
 details:not([open]) .content {
-  max-height: 0; /* Cambia height por max-height */
+  max-height: 0;
   opacity: 0;
   transform: translateY(-8px);
-  padding: 0; /* Elimina el padding cuando está cerrado */
+  padding: 0;
   transition: 
     max-height var(--transition-duration) ease-in-out,
     opacity var(--transition-duration) ease-in-out,
     transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
     padding var(--transition-duration) ease-in-out;
-  overflow: hidden; /* Asegura que el contenido no se desborde */
+  overflow: hidden;
 }
 
 details[open] .content {
-  max-height: 500px; /* Usa un valor fijo suficientemente grande */
+  max-height: 500px;
   opacity: 1;
   transform: translateY(0);
-  padding: 0 1rem; /* Agrega el padding solo cuando está abierto */
+  padding: 0 1rem;
   background-color: #f8fafc;
   transition: 
     max-height var(--transition-duration) ease-in-out,
