@@ -1,4 +1,4 @@
-# Pre-entrega 2 - Proyecto Final Romero
+# Proyecto Final
 
 Este proyecto es la entrega final del curso, desarrollado para poner en práctica todos los conocimientos adquiridos sobre desarrollo web, diseño responsive, SASS, Bootstrap, SEO y buenas prácticas.
 
