@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://secreto21.github.io/Pre-entrega2_proyectoRomero/sitemap.xml
